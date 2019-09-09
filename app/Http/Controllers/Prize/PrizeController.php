@@ -14,7 +14,7 @@ class PrizeController
     {
         //抽奖逻辑处理
         $uid = mt_rand(1,10000);
-        $uid = 5614;
+        
         //获取用户抽奖记录
         $record = PrizeModel::where(['uid'=>$uid])->get()->toArray();
         $count = 0;
@@ -67,7 +67,7 @@ class PrizeController
     protected function getPrizeLevel()
     {
         $rand_number = mt_rand(1,100);
-        $rand_number = 2;
+        //$rand_number = 2;
         //判断一等奖个数
         if($rand_number==1){
             $count = PrizeModel::where(['level'=>1])->count();
