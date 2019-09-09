@@ -14,7 +14,7 @@ class PrizeController
     {
         //抽奖逻辑处理
         $uid = mt_rand(1,10000);
-        $uid = 100;
+        $uid = 5614;
         //获取用户抽奖记录
         $record = PrizeModel::where(['uid'=>$uid])->get()->toArray();
         $count = 0;
